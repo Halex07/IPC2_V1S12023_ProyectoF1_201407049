@@ -2,6 +2,9 @@ import xml.etree.ElementTree as ET
 import os 
 from peliculas import *
 from Listas import *
+from gestionUsuarios import *
+from gestionarcategorias import *
+from salas   import *
 
 # Definir la clase para el nodo de la lista enlazada
 class NodoUsuario:
@@ -58,29 +61,34 @@ def iniciar_sesion(lista_usuarios):
         print("Nombre de usuario o contraseña incorrectos.")
 
 def mostrar_menu_admin():
+    os.system ("clear") 
     print("Bienvenido " )
     print("1. Gestionar usuarios")
     print("2. Gestionar Categorías y películas ")
     print("3. Gestionar Salas")
     print("4. Gestionar boletos comprados")
     print("5. Salir")
-    menua = input()
+    menua = input('Seleccione la Opcion que desea: ')
+    if menua == '1':
+        usr()
+    if menua == '2':
+        ejecutar_menu()
+    if menua  ==  '3':
+        ejecutar_menu_salas()
+    if menua  ==  '4':
+
+        eliminar_boleto()
     
 
 def mostrar_menu_client():
     menu()
         
-      
-
-
-
-
 
 # Crear una instancia de la lista enlazada
 usuarios = ListaUsuarios()
 
 # Leer el archivo XML y almacenar la información en la lista enlazada
-tree = ET.parse('users.xml')
+tree = ET.parse('usuarios.xml')
 root = tree.getroot()
 
 for usuario_xml in root.findall('usuario'):

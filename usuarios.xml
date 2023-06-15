@@ -1,11 +1,1 @@
-<users>
-    <user>
-        <username>usuario1</username>
-        <password>contraseña1</password>
-    </user>
-    <user>
-        <username>usuario2</username>
-        <password>contraseña2</password>
-    </user>
-    <!-- Agrega más usuarios si es necesario -->
-</users>
+<usuarios><usuario><rol>cliente</rol><nombre>Mark</nombre><apellido>Zuc</apellido><telefono>7666</telefono><correo>ee</correo><contrasena>7666</contrasena></usuario></usuarios>

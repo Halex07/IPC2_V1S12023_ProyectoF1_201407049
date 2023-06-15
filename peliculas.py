@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 from Listas import *
-
+import os
 
 def cargar_peliculas_desde_xml():
     root = ET.parse('peliculas.xml')
@@ -26,6 +26,7 @@ def cargar_peliculas_desde_xml():
     return lista_categorias
 
 def mostrar_listado_peliculas(lista_categorias):
+    os.system ("clear") 
     print("----- Listado de Películas -----")
     print("1. Listado general")
     print("2. Listado por categoría")
@@ -155,10 +156,28 @@ def obtener_pelicula_seleccionada(categoria, pelicula_seleccionada):
 lista_categorias = cargar_peliculas_desde_xml()
 lista_boletos = ListaBoletos()
 
+def eliminar_boleto(lista_boletos):
+    print("----- Eliminar Boleto -----")
+
+    # Solicitar al usuario que ingrese el número de boleto a eliminar
+    numero_boleto = input("Ingrese el número de boleto que desea eliminar: ")
+
+    # Buscar el boleto en la lista de boletos
+    boleto = lista_boletos.buscar_boleto_por_numero(numero_boleto)
+
+    if boleto is None:
+        print("El boleto no existe.")
+        return
+
+    # Eliminar el boleto de la lista de boletos
+    lista_boletos.eliminar_boleto(boleto)
+
+    print("Boleto eliminado exitosamente.")
 
 lista_categorias = cargar_peliculas_desde_xml()
 def menu():
     while True:
+        os.system ("clear") 
         print("----- MENU -----")
         print("1. Ver listado de películas")
         print("2. Marcar película como favorita")

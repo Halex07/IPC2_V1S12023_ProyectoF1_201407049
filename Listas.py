@@ -6,6 +6,7 @@ class Pelicula:
         self.fecha = fecha
         self.hora = hora
         self.siguiente = None
+        
 
 class Categoria:
     def __init__(self, nombre):

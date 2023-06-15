@@ -51,4 +51,16 @@
             </pelicula>
         </peliculas>
     </categoria>
+    <categoria>
+        <nombre>Accion</nombre>
+        <peliculas>
+            <pelicula>
+                <titulo>Walle</titulo>
+                <director>Jhon</director>
+                <anio>2004</anio>
+                <fecha>2023-01-01</fecha>
+                <hora>20:34</hora>
+            </pelicula>
+        </peliculas>
+    </categoria>
 </categorias>
